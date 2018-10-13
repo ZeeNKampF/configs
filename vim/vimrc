@@ -1,0 +1,96 @@
+set nocompatible
+filetype off
+syntax on
+
+set shell=zsh
+
+set tabstop=4
+set softtabstop=4
+set expandtab
+set smarttab
+
+set shiftwidth=4
+set shiftround
+set backspace=indent,eol,start
+
+set autoindent
+set copyindent
+
+set hlsearch
+set incsearch
+
+set smartcase
+set ignorecase
+
+set number
+set showmatch
+
+set history=150
+set autoread
+
+set clipboard=unnamed
+
+" #yolo
+set noswapfile
+set nobackup
+" #endyolo
+
+set wildmenu
+set title
+
+if !has('gui_running')
+  set t_Co=256
+endif
+
+if (has("termguicolors"))
+   set termguicolors
+endif
+
+set laststatus=2
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-surround'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/syntastic'
+Plugin 'itchyny/lightline.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'godlygeek/tabular'
+Plugin 'octol/vim-cpp-enhanced-highlight'
+Plugin 'mileszs/ack.vim'
+Plugin 'craigemery/vim-autotag'
+
+" Themes
+Plugin 'szorfein/fromthehell.vim'
+Plugin 'nightsense/carbonized'
+Plugin 'nightsense/vrunchbang'
+Plugin 'nightsense/office'
+Plugin 'nightsense/simplifysimplify'
+Plugin 'ajmwagar/vim-deus'
+Plugin 'nightsense/stellarized'
+Plugin 'aradunovic/perun.vim'
+Plugin 'kaicataldo/material.vim'
+Plugin 'jacoborus/tender.vim'
+
+call vundle#end()
+filetype plugin indent on
+
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+map <C-n> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
+
+" Set theme
+syntax enable
+colorscheme carbonized-dark
+let g:lightline = {
+    \ 'colorscheme': 'carbonized_dark',
+    \ }
