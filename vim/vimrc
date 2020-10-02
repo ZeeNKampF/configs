@@ -48,35 +48,6 @@ endif
 
 set laststatus=2
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-surround'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'scrooloose/syntastic'
-Plugin 'itchyny/lightline.vim'
-Plugin 'majutsushi/tagbar'
-Plugin 'godlygeek/tabular'
-Plugin 'octol/vim-cpp-enhanced-highlight'
-Plugin 'mileszs/ack.vim'
-Plugin 'craigemery/vim-autotag'
-
-" Themes
-Plugin 'szorfein/fromthehell.vim'
-Plugin 'nightsense/carbonized'
-Plugin 'nightsense/vrunchbang'
-Plugin 'nightsense/office'
-Plugin 'nightsense/simplifysimplify'
-Plugin 'ajmwagar/vim-deus'
-Plugin 'nightsense/stellarized'
-Plugin 'aradunovic/perun.vim'
-Plugin 'kaicataldo/material.vim'
-Plugin 'jacoborus/tender.vim'
-
-call vundle#end()
 filetype plugin indent on
 
 nmap <silent> <A-Up> :wincmd k<CR>
